@@ -33,10 +33,10 @@ public class SearchController {
                 List<Game> theList= searchSvc.search(name, number);
                                
 
-                
+                if(theList.isEmpty()) return "No Games Found";
 
                 model.addAttribute("gamesList", theList);
-                return "new";
+                return "Your search";
             }
         
 }
